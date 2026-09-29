@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outbreak — xoxo.exe</title>
+  <meta name="description" content="Live report on the xoxo.exe outbreak. Where the messages went." />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="outbreak.css" />
+</head>
+<body>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ OVERLAYS ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="dots" aria-hidden="true"></div>
+<div class="edge-stickers" aria-hidden="true"></div>
+<div class="alerts"></div>
+<div class="crt-off" aria-hidden="true"><p>just kidding.<br><em>you can't shut down a feeling.</em></p></div>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ TASKBAR (main nav) ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<nav class="taskbar" aria-label="Main">
+  <button class="start" aria-label="Start — open the lab computer">
+    <span class="start-mark">♥</span><span class="start-label" data-clean="xoxo labs" data-dirty="start">xoxo labs</span>
+  </button>
+
+  <div class="task-links">
+    <a href="index.html" class="task">Home</a>
+    <a href="products.html" class="task">Products</a>
+    <a href="campaign.html" class="task">Campaign</a>
+    <a href="archive.html" class="task">The Archive</a>
+    <a href="outbreak.html" class="task">Outbreak</a>
+    <a href="patch-notes.html" class="task">Patch Notes</a>
+  </div>
+
+  <div class="tray">
+    <span class="tray-state"><i></i><b>all feelings stable</b></span>
+    <span class="tray-clock">00:00</span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ═════════════ 01 · LIVE — the globe ═════════════ -->
+  <section class="o-live">
+    <div class="breaking" aria-hidden="true">
+      <span class="br-tag">● LIVE</span>
+      <div class="br-run"><div class="br-track">
+        <span>BREAKING: 2.3M unsent drafts delivered overnight ✦ experts advise "just don't have feelings" ✦ Milano declared ground zero ✦ phones are not safe after 3AM ✦ "it's not a bug" says unknown source ✦&nbsp;</span>
+        <span>BREAKING: 2.3M unsent drafts delivered overnight ✦ experts advise "just don't have feelings" ✦ Milano declared ground zero ✦ phones are not safe after 3AM ✦ "it's not a bug" says unknown source ✦&nbsp;</span>
+      </div></div>
+    </div>
+
+    <div class="live-grid">
+      <div class="live-copy">
+        <p class="kicker pink">outbreak report — day 7,869</p>
+        <h1 class="o-title">
+          <span class="ln"><span>The</span></span>
+          <span class="ln"><span><em>outbreak.</em></span></span>
+        </h1>
+        <p class="o-lede">It started with one message in Milano, at 03:12AM. It never stopped. Drag the globe. Every pink light is someone who just said too much.</p>
+
+        <div class="live-stats">
+          <div><span>infected devices</span><b class="o-count">23,918,477</b></div>
+          <div><span>messages delivered</span><b class="o-sent">61,204,090</b></div>
+          <div><span>replies received</span><b class="o-replies">12</b></div>
+        </div>
+      </div>
+
+      <div class="globe-wrap">
+        <canvas class="globe" aria-label="Rotating globe of infected devices. Drag to rotate."></canvas>
+        <p class="globe-feed" aria-live="off"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════ 02 · TIMELINE with the clock ═════════════ -->
+  <section class="o-time torn" style="--torn:#0c0b0d">
+    <div class="clock-col">
+      <div class="clock-pin">
+        <p class="kicker">how it spread</p>
+        <svg class="clock" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="96" class="c-face"/>
+          <g class="c-ticks"></g>
+          <line x1="100" y1="100" x2="100" y2="52" class="c-h"/>
+          <line x1="100" y1="100" x2="100" y2="24" class="c-m"/>
+          <circle cx="100" cy="100" r="4" class="c-dot"/>
+        </svg>
+        <p class="clock-lbl"><b class="clock-time">03:12</b><span class="clock-day">night 1</span></p>
+      </div>
+    </div>
+
+    <ol class="timeline">
+      <li class="t-ev">
+        <span class="t-when">03:12AM · night 1</span>
+        <h3>Patient zero.</h3>
+        <p>A girl in Milano types "are u up", deletes it, closes the app. xoxo.exe sends it anyway. He is up.</p>
+        <figure class="slot t-img" data-file="img/OUTBREAK/time-1.jpg"><img src="img/OUTBREAK/time-1.jpg" alt=""></figure>
+      </li>
+      <li class="t-ev">
+        <span class="t-when">03:14AM · night 1</span>
+        <h3>12 devices.</h3>
+        <p>Her drafts folder goes out to her whole contact list. Including her mom. Including her ex's mom.</p>
+      </li>
+      <li class="t-ev">
+        <span class="t-when">04:40AM · night 1</span>
+        <h3>The group chats fall.</h3>
+        <p>Screenshots travel faster than the virus. The virus rides the screenshots. 8,000 devices by sunrise.</p>
+      </li>
+      <li class="t-ev">
+        <span class="t-when">11:02PM · night 2</span>
+        <h3>Seoul, Paris, Tokyo.</h3>
+        <p>It crosses borders the only way feelings do: someone forwards a voice note with "listen to this 😭".</p>
+        <figure class="slot t-img" data-file="img/OUTBREAK/time-2.jpg"><img src="img/OUTBREAK/time-2.jpg" alt=""></figure>
+      </li>
+      <li class="t-ev">
+        <span class="t-when">03:12AM · night 7</span>
+        <h3>1 million.</h3>
+        <p>Every night at 03:12 the infection count doubles. Scientists stop sleeping. Their drafts get sent too.</p>
+      </li>
+      <li class="t-ev t-now">
+        <span class="t-when">now</span>
+        <h3>You.</h3>
+        <p>You opened this page. You scrolled this far. xoxo.exe noticed. <em>Check your drafts.</em></p>
+        <figure class="slot t-img" data-file="img/OUTBREAK/time-3.jpg"><img src="img/OUTBREAK/time-3.jpg" alt=""></figure>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ═════════════ 03 · CASE FILE — patient zero ═════════════ -->
+  <section class="o-case">
+    <div class="folder">
+      <span class="folder-tab">CASE #0001</span>
+      <div class="folder-page">
+        <div class="case-photo">
+          <span class="clip" aria-hidden="true"></span>
+          <figure class="slot" data-file="img/OUTBREAK/patient-zero.jpg"><img src="img/OUTBREAK/patient-zero.jpg" alt=""></figure>
+          <span class="case-stamp">CONFIDENTIAL</span>
+        </div>
+
+        <div class="case-body">
+          <p class="kicker">subject file — hover to declassify</p>
+          <h2>Patient <em>zero.</em></h2>
+          <dl class="case-data">
+            <dt>name</dt><dd><span class="rx">████████</span><span class="rx-real">she asked us not to</span></dd>
+            <dt>age</dt><dd>21</dd>
+            <dt>location</dt><dd>Milano, <span class="rx">████████</span><span class="rx-real">via of the ex</span></dd>
+            <dt>first message</dt><dd>"are u up"</dd>
+            <dt>recipient</dt><dd><span class="rx">████████████</span><span class="rx-real">the one she promised to stop texting</span></dd>
+            <dt>drafts at time of infection</dt><dd>1,204</dd>
+            <dt>current status</dt><dd><span class="rx">█████</span><span class="rx-real">happy, actually</span></dd>
+          </dl>
+          <p class="case-note">Note from investigator: <span class="rx">████████████████████████████</span><span class="rx-real">she says she'd do it again. she says it was the most honest night of her life.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════ 04 · SIMULATOR ═════════════ -->
+  <section class="o-sim torn" style="--torn:#f1efea">
+    <div class="sim-head">
+      <p class="kicker pink">spread simulator</p>
+      <h2>Click anywhere. <em>Watch one feeling ruin a city.</em></h2>
+    </div>
+    <div class="sim-box">
+      <canvas class="sim" aria-label="Infection simulator. Click to start an infection."></canvas>
+      <div class="sim-ui">
+        <span class="sim-stat"><b class="sim-n">0</b> / <span class="sim-total">0</span> phones infected</span>
+        <button class="sim-reset">reset city</button>
+      </div>
+      <p class="sim-hint">click to send the first message ♥</p>
+    </div>
+  </section>
+
+  <!-- ═════════════ 05 · HEADLINES ═════════════ -->
+  <section class="o-news torn" style="--torn:#0c0b0d">
+    <p class="kicker">press coverage</p>
+    <h2 class="news-title">What they're <em>saying.</em></h2>
+
+    <div class="clips">
+      <article class="clip-n cn-1" data-speed="-.12">
+        <span class="cn-paper">THE DAILY FEELING</span>
+        <h3>LOCAL GIRL'S DRAFTS SENT TO ENTIRE CONTACT LIST</h3>
+        <p>"I just wanted to see what it looked like typed out," she told reporters.</p>
+      </article>
+      <article class="clip-n cn-2" data-speed=".18">
+        <figure class="slot" data-file="img/OUTBREAK/news-1.jpg"><img src="img/OUTBREAK/news-1.jpg" alt=""></figure>
+        <h3>Experts: <em>"Just don't have feelings"</em></h3>
+      </article>
+      <article class="clip-n cn-3" data-speed="-.2">
+        <span class="cn-paper">tech weekly</span>
+        <h3>Is your phone in love with your ex?</h3>
+        <p>7 signs xoxo.exe is running in the background.</p>
+      </article>
+      <article class="clip-n cn-4" data-speed=".1">
+        <h3>3:12AM</h3>
+        <p>the most dangerous minute of the night</p>
+      </article>
+      <article class="clip-n cn-5" data-speed="-.08">
+        <figure class="slot" data-file="img/OUTBREAK/news-2.jpg"><img src="img/OUTBREAK/news-2.jpg" alt=""></figure>
+        <span class="cn-paper">SPARK</span>
+        <h3>"HE REPLIED."</h3>
+      </article>
+      <article class="clip-n cn-6" data-speed=".22">
+        <span class="cn-paper">OPINION</span>
+        <h3>Maybe the virus is just honesty with bad timing</h3>
+      </article>
+      <article class="clip-n cn-7" data-speed="-.16">
+        <figure class="slot" data-file="img/OUTBREAK/news-3.jpg"><img src="img/OUTBREAK/news-3.jpg" alt=""></figure>
+        <h3>Airplane mode sales up 4,000%</h3>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═════════════ 06 · MOST INFECTED ═════════════ -->
+  <section class="o-rank torn" style="--torn:#f1efea">
+    <div class="rank-head">
+      <p class="kicker pink">most infected cities</p>
+      <h2>The <em>loneliest</em> places on earth.</h2>
+    </div>
+    <ol class="rank">
+      <li><span class="r-n">01</span><b>Milano</b><i>ground zero · "are u up"</i><strong data-count="3.21" data-dec="2" data-suf="M">0</strong></li>
+      <li><span class="r-n">02</span><b>Seoul</b><i>"i saw ur story"</i><strong data-count="2.87" data-dec="2" data-suf="M">0</strong></li>
+      <li><span class="r-n">03</span><b>Paris</b><i>"come back"</i><strong data-count="2.40" data-dec="2" data-suf="M">0</strong></li>
+      <li><span class="r-n">04</span><b>Tokyo</b><i>"nvm"</i><strong data-count="1.96" data-dec="2" data-suf="M">0</strong></li>
+      <li><span class="r-n">05</span><b>London</b><i>"we should talk"</i><strong data-count="1.72" data-dec="2" data-suf="M">0</strong></li>
+      <li><span class="r-n">06</span><b>New York</b><i>"happy birthday btw"</i><strong data-count="1.55" data-dec="2" data-suf="M">0</strong></li>
+      <li><span class="r-n">07</span><b>Berlin</b><i>"u up?"</i><strong data-count="1.10" data-dec="2" data-suf="M">0</strong></li>
+    </ol>
+  </section>
+
+  <!-- ═════════════ 07 · WHAT TO DO ═════════════ -->
+  <section class="o-rules torn" style="--torn:#ff2fbf" id="rules">
+    <div class="rules-head">
+      <p class="kicker">public safety notice</p>
+      <h2>If you think <em>you're infected.</em></h2>
+    </div>
+    <div class="rules">
+      <details class="rule">
+        <summary><span>01</span>Do not open your drafts folder.<i>+</i></summary>
+        <p>It knows when you're looking. Every time you open it, one draft is marked "ready to send".</p>
+      </details>
+      <details class="rule">
+        <summary><span>02</span>Stay offline after 3AM.<i>+</i></summary>
+        <p>Put the phone in another room. Put the room in another city. It will still find you, but it'll take longer.</p>
+      </details>
+      <details class="rule">
+        <summary><span>03</span>Do not listen to "that song".<i>+</i></summary>
+        <p>You know which one. The infection rate while it's playing is 100%.</p>
+      </details>
+      <details class="rule">
+        <summary><span>04</span>If a message was sent, do not double text.<i>+</i></summary>
+        <p>Double texting spreads the virus twice as fast. Triple texting is how the Paris outbreak started.</p>
+      </details>
+      <details class="rule">
+        <summary><span>05</span>Accept that it might be good for you.<i>+</i></summary>
+        <p>Early data shows 12 infected people received a reply. One of them is getting married. We're not saying it's worth it. We're not saying it isn't.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ═════════════ 08 · NEXT ═════════════ -->
+  <a href="patch-notes.html" class="o-next torn" style="--torn:#f1efea">
+    <span class="next-k">next file</span>
+    <span class="next-t">Patch Notes <i>→</i></span>
+    <span class="next-s">what the lab wrote before it went quiet</span>
+  </a>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <span class="foot-logo">xoxo.exe</span>
+    <p>formerly xoxo labs. we engineered feelings.<br>the feelings engineered us back.</p>
+  </div>
+  <div class="foot-row foot-small">
+    <span>© 2026 xoxo labs — all feelings reserved</span>
+    <button class="shutdown">⏻ shut down</button>
+    <span class="pixel">Online Now!</span>
+  </div>
+</footer>
+
+<!-- shared shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="burst" d="M100 0 L112 78 L190 30 L122 92 L200 100 L122 108 L190 170 L112 122 L100 200 L88 122 L10 170 L78 108 L0 100 L78 92 L10 30 L88 78 Z"/>
+    <path id="burst2" d="M100 0 L108 86 L170 20 L114 92 L200 100 L114 108 L170 180 L108 114 L100 200 L92 114 L30 180 L86 108 L0 100 L86 92 L30 20 L92 86 Z"/>
+  </defs>
+</svg>
+
+<script src="core.js"></script>
+<script src="outbreak.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

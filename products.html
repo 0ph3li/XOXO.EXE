@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — xoxo.exe</title>
+  <meta name="description" content="The xoxo labs product catalog: feelings, as software. One of them should not be installed." />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="products.css" />
+</head>
+<body>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ OVERLAYS ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="dots" aria-hidden="true"></div>
+<div class="edge-stickers" aria-hidden="true"></div>
+<div class="alerts"></div>
+<div class="crt-off" aria-hidden="true"><p>just kidding.<br><em>you can't shut down a feeling.</em></p></div>
+<div class="flood" aria-hidden="true"><p>jealousy.exe<br><em>is now running.</em></p></div>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ TASKBAR (main nav) ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<nav class="taskbar" aria-label="Main">
+  <button class="start" aria-label="Start — open the lab computer">
+    <span class="start-mark">♥</span><span class="start-label" data-clean="xoxo labs" data-dirty="start">xoxo labs</span>
+  </button>
+
+  <div class="task-links">
+    <a href="index.html" class="task">Home</a>
+    <a href="products.html" class="task">Products</a>
+    <a href="campaign.html" class="task">Campaign</a>
+    <a href="archive.html" class="task">The Archive</a>
+    <a href="outbreak.html" class="task">Outbreak</a>
+    <a href="patch-notes.html" class="task">Patch Notes</a>
+  </div>
+
+  <div class="tray">
+    <span class="tray-state"><i></i><b>all feelings stable</b></span>
+    <span class="tray-clock">00:00</span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ═════════════ 01 · SHELF — the software box ═════════════ -->
+  <section class="p-shelf">
+    <header class="shelf-top">
+      <a href="index.html" class="wordmark">xoxo <span>labs</span></a>
+      <span>product catalog — 2004/2026</span>
+      <span>5 programs · <b class="pink">1 recalled</b></span>
+    </header>
+
+    <div class="shelf-grid">
+      <div class="shelf-copy">
+        <p class="kicker">all products</p>
+        <h1 class="shelf-title">
+          <span class="ln"><span>Pick a</span></span>
+          <span class="ln"><span><em>feeling.</em></span></span>
+        </h1>
+        <p class="shelf-lede">Every xoxo program ships in a real box, with a real CD, and a real feeling inside. Drag the box to look around it.</p>
+
+        <div class="shelf-picks" role="tablist" aria-label="Choose a product">
+          <button class="pick is-on" data-i="0" role="tab">Crush 2.0</button>
+          <button class="pick" data-i="1" role="tab">Heartbreak Patch</button>
+          <button class="pick" data-i="2" role="tab">Closure.dmg</button>
+          <button class="pick" data-i="3" role="tab">Situationship Lite</button>
+          <button class="pick pick-bad" data-i="4" role="tab">Jealousy Beta</button>
+        </div>
+      </div>
+
+      <div class="box-zone" aria-label="Software box, drag to rotate">
+        <div class="box-floor" aria-hidden="true"></div>
+        <div class="box">
+          <div class="face f-front">
+            <figure class="slot box-art" data-file="img/INDEX/product-crush.jpg"><img src="img/INDEX/product-crush.jpg" alt=""></figure>
+            <span class="box-brand">xoxo labs</span>
+            <div class="box-label">
+              <b class="box-name">Crush 2.0</b>
+              <span class="box-tag">butterflies, on demand.</span>
+            </div>
+            <span class="box-cd">CD‑ROM · Win 98 / 2000 / XP · Mac OS 9</span>
+            <svg class="box-new" viewBox="0 0 200 200" aria-hidden="true"><use href="#burst"/></svg>
+            <span class="box-new-txt">NEW!</span>
+          </div>
+          <div class="face f-back">
+            <b>What's inside</b>
+            <ul class="box-back-list">
+              <li>1 feeling (full version)</li>
+              <li>1 CD, heart‑shaped</li>
+              <li>printed manual (unread)</li>
+              <li>sticker sheet ♥</li>
+            </ul>
+            <span class="box-barcode" aria-hidden="true"></span>
+            <small>© 2004 xoxo labs. feelings are licensed, not sold.</small>
+          </div>
+          <div class="face f-right"><span class="spine">xoxo labs · <b class="spine-name">Crush 2.0</b></span></div>
+          <div class="face f-left"><span class="spine">emotional software</span></div>
+          <div class="face f-top"></div>
+          <div class="face f-bottom"></div>
+        </div>
+        <span class="box-hint">↔ drag to rotate</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════ 02 · INDEX — filterable grid ═════════════ -->
+  <section class="p-index">
+    <div class="index-head">
+      <h2>The line‑up</h2>
+      <div class="filters" role="group" aria-label="Filter products">
+        <button class="flt is-on" data-f="all">All <sup>5</sup></button>
+        <button class="flt" data-f="stable">Stable <sup>2</sup></button>
+        <button class="flt" data-f="beta">Beta <sup>2</sup></button>
+        <button class="flt" data-f="bad">Recalled <sup>1</sup></button>
+      </div>
+    </div>
+
+    <div class="tiles">
+      <a href="#crush" class="tile" data-k="stable">
+        <figure class="slot" data-file="img/INDEX/product-crush.jpg"><img src="img/INDEX/product-crush.jpg" alt=""></figure>
+        <span class="tile-n">01</span><b>Crush 2.0</b><i class="st ok">stable</i>
+      </a>
+      <a href="#heartbreak" class="tile" data-k="stable">
+        <figure class="slot" data-file="img/INDEX/product-heartbreak.jpg"><img src="img/INDEX/product-heartbreak.jpg" alt=""></figure>
+        <span class="tile-n">02</span><b>Heartbreak Patch</b><i class="st ok">stable</i>
+      </a>
+      <a href="#closure" class="tile" data-k="beta">
+        <figure class="slot" data-file="img/INDEX/product-closure.jpg"><img src="img/INDEX/product-closure.jpg" alt=""></figure>
+        <span class="tile-n">03</span><b>Closure.dmg</b><i class="st warn">beta</i>
+      </a>
+      <a href="#situationship" class="tile" data-k="beta">
+        <figure class="slot" data-file="img/INDEX/product-situationship.jpg"><img src="img/INDEX/product-situationship.jpg" alt=""></figure>
+        <span class="tile-n">04</span><b>Situationship Lite</b><i class="st warn">unlabeled</i>
+      </a>
+      <a href="#jealousy" class="tile tile-bad" data-k="bad">
+        <figure class="slot" data-file="img/INDEX/product-jealosy.jpg"><img src="img/INDEX/product-jealosy.jpg" alt=""></figure>
+        <span class="tile-n">05</span><b>Jealousy Beta</b><i class="st bad">recalled</i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═════════════ 03 · CHAPTERS — one per product ═════════════ -->
+  <div class="chapters">
+
+    <article class="chap" id="crush" data-lvl="0">
+      <div class="chap-media">
+        <figure class="slot chap-img" data-file="img/INDEX/product-crush.jpg"><img src="img/INDEX/product-crush.jpg" alt=""></figure>
+        <span class="chap-ver">v2.0 — stable</span>
+      </div>
+      <div class="chap-body">
+        <span class="chap-n">01 / 05</span>
+        <h2 class="chap-name">Crush 2.0</h2>
+        <p class="chap-tag"><em>butterflies, on demand.</em></p>
+        <p class="chap-desc">Our best‑seller. Crush 2.0 installs a warm, low‑level buzz behind the ribs and keeps it running in the background. Now with 40% less overthinking and a brand‑new notification blush.</p>
+
+        <h3 class="chap-h">features</h3>
+        <ul class="feat">
+          <li>auto‑blush on every notification</li>
+          <li>playlist generator (one person only)</li>
+          <li>40% less overthinking</li>
+          <li>"seen" anxiety suppression <sup>beta</sup></li>
+        </ul>
+
+        <h3 class="chap-h">system requirements</h3>
+        <dl class="req">
+          <dt>heart</dt><dd>1, any condition</dd>
+          <dt>memory</dt><dd>every word they ever said</dd>
+          <dt>storage</dt><dd>12 GB of screenshots</dd>
+          <dt>os</dt><dd>late‑night overthinking 3.1+</dd>
+        </dl>
+
+        <button class="install" data-name="Crush 2.0">Install Crush 2.0 <span>↓</span></button>
+      </div>
+    </article>
+
+    <article class="chap" id="heartbreak" data-lvl="0">
+      <div class="chap-media">
+        <figure class="slot chap-img" data-file="img/INDEX/product-heartbreak.jpg"><img src="img/INDEX/product-heartbreak.jpg" alt=""></figure>
+        <span class="chap-ver">v1.9 — stable</span>
+      </div>
+      <div class="chap-body">
+        <span class="chap-n">02 / 05</span>
+        <h2 class="chap-name">Heartbreak Patch</h2>
+        <p class="chap-tag"><em>silent install. loud recovery.</em></p>
+        <p class="chap-desc">Runs quietly in the background and fixes what they broke. Heartbreak Patch removes 3AM texting habits, rebuilds self‑esteem.exe from backup and reminds you to give the hoodie back (you won't).</p>
+
+        <h3 class="chap-h">features</h3>
+        <ul class="feat">
+          <li>removes 3AM texting habits automatically</li>
+          <li>hides their story (you'll still check)</li>
+          <li>rebuilds self‑esteem.exe from backup</li>
+          <li>hoodie return reminder</li>
+        </ul>
+
+        <h3 class="chap-h">system requirements</h3>
+        <dl class="req">
+          <dt>heart</dt><dd>1, damaged is fine</dd>
+          <dt>tears</dt><dd>optional</dd>
+          <dt>playlist</dt><dd>sad girl autumn</dd>
+          <dt>os</dt><dd>any breakup older than 1 week</dd>
+        </dl>
+
+        <button class="install" data-name="Heartbreak Patch">Install Heartbreak Patch <span>↓</span></button>
+      </div>
+    </article>
+
+    <article class="chap chap-flip" id="closure" data-lvl="1">
+      <div class="chap-media">
+        <figure class="slot chap-img" data-file="img/INDEX/product-closure.jpg"><img src="img/INDEX/product-closure.jpg" alt=""></figure>
+        <span class="chap-ver">v0.8 — beta</span>
+      </div>
+      <div class="chap-body">
+        <span class="chap-n">03 / 05</span>
+        <h2 class="chap-name">Closure.dmg</h2>
+        <p class="chap-tag"><em>mount, drag, forget.</em></p>
+        <p class="chap-desc">Double‑click to mount. Drag your ex to the trash. Empty the trash. That's it. <span class="leak">Known issue: Closure.dmg reopens itself on anniversaries, birthdays and whenever that song plays.</span></p>
+
+        <h3 class="chap-h">features</h3>
+        <ul class="feat">
+          <li>drag‑to‑trash for exes (any model)</li>
+          <li>final conversation simulator</li>
+          <li>empty trash <sup>may fail</sup></li>
+          <li>reopens itself on anniversaries <sup>bug</sup></li>
+        </ul>
+
+        <h3 class="chap-h">system requirements</h3>
+        <dl class="req">
+          <dt>heart</dt><dd>1</dd>
+          <dt>patience</dt><dd>unlimited</dd>
+          <dt>ex</dt><dd>any model</dd>
+          <dt>os</dt><dd>acceptance 2.0 (not released yet)</dd>
+        </dl>
+
+        <button class="install" data-name="Closure.dmg">Mount Closure.dmg <span>↓</span></button>
+      </div>
+    </article>
+
+    <article class="chap chap-flip" id="situationship" data-lvl="2">
+      <div class="chap-media">
+        <figure class="slot chap-img" data-file="img/INDEX/product-situationship.jpg"><img src="img/INDEX/product-situationship.jpg" alt=""></figure>
+        <span class="chap-ver">v?.? — unlabeled</span>
+      </div>
+      <div class="chap-body">
+        <span class="chap-n">04 / 05</span>
+        <h2 class="chap-name">Situationship Lite</h2>
+        <p class="chap-tag"><em>all the feelings. none of the labels.</em></p>
+        <p class="chap-desc">The free trial that never expires. Situationship Lite gives you everything a relationship has, except an answer. <span class="leak">What are we? This feature is not supported in your region.</span></p>
+
+        <h3 class="chap-h">features</h3>
+        <ul class="feat">
+          <li>infinite trial period</li>
+          <li>mixed signals engine</li>
+          <li>auto‑reply: "haha"</li>
+          <li>label support <sup>coming never</sup></li>
+        </ul>
+
+        <h3 class="chap-h">system requirements</h3>
+        <dl class="req">
+          <dt>heart</dt><dd>shared, sometimes</dd>
+          <dt>commitment</dt><dd>not found</dd>
+          <dt>weekends</dt><dd>depends</dd>
+          <dt>os</dt><dd>"what are we" — unsupported</dd>
+        </dl>
+
+        <button class="install" data-name="Situationship Lite">Install Situationship Lite <span>↓</span></button>
+      </div>
+    </article>
+  </div>
+
+  <!-- ═════════════ 04 · COMPARE ═════════════ -->
+  <section class="p-compare torn" style="--torn:#ebe7e2">
+    <p class="kicker pink">compare</p>
+    <h2>Which feeling is <em>right for you?</em></h2>
+
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead>
+          <tr><th></th><th>Crush 2.0</th><th>Heartbreak Patch</th><th>Closure.dmg</th><th>Situationship Lite</th><th class="c-bad">Jealousy Beta</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>safe at 3AM</th><td>✗</td><td>✓</td><td>✓</td><td>✗</td><td class="c-bad">ERR</td></tr>
+          <tr><th>can be uninstalled</th><td>✓</td><td>✓</td><td>—</td><td>?</td><td class="c-bad">✗✗✗</td></tr>
+          <tr><th>remembers everything</th><td>♥</td><td>✗</td><td>✓</td><td>✓</td><td class="c-bad">everything</td></tr>
+          <tr><th>makes you text first</th><td>✓</td><td>✗</td><td>✗</td><td>always</td><td class="c-bad">at 3:12AM</td></tr>
+          <tr><th>checks their location</th><td>✗</td><td>✗</td><td>✗</td><td>✗</td><td class="c-bad">every 4 min</td></tr>
+          <tr><th>stable</th><td>✓</td><td>✓</td><td>beta</td><td>who knows</td><td class="c-bad">█████</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═════════════ 05 · QUARANTINE — Jealousy Beta ═════════════ -->
+  <section class="p-quarantine" id="jealousy">
+    <div class="q-tape q-tape-a" aria-hidden="true"><div class="q-run"><span>PRODUCT RECALLED ✦ DO NOT INSTALL ✦ PRODUCT RECALLED ✦ DO NOT INSTALL ✦&nbsp;</span><span>PRODUCT RECALLED ✦ DO NOT INSTALL ✦ PRODUCT RECALLED ✦ DO NOT INSTALL ✦&nbsp;</span></div></div>
+
+    <div class="q-grid">
+      <div class="q-media">
+        <figure class="slot q-img" data-file="img/INDEX/product-jealosy.jpg"><img src="img/INDEX/product-jealosy.jpg" alt=""></figure>
+        <figure class="slot q-img q-ghost q-g1" aria-hidden="true"><img src="img/INDEX/product-jealosy.jpg" alt=""></figure>
+        <figure class="slot q-img q-ghost q-g2" aria-hidden="true"><img src="img/INDEX/product-jealosy.jpg" alt=""></figure>
+        <span class="q-stamp">RECALLED</span>
+      </div>
+
+      <div class="q-body">
+        <span class="chap-n">05 / 05 — quarantined</span>
+        <h2 class="q-name" data-name="Jealousy Beta">Jealousy Beta</h2>
+        <p class="q-warn">This product was recalled on 03.14.2004 after 1 (one) internal test. The tester is still checking someone's location. We are not able to reach them.</p>
+
+        <dl class="req req-bad">
+          <dt>heart</dt><dd>yours. and theirs.</dd>
+          <dt>memory</dt><dd>their last seen, forever</dd>
+          <dt>side effects</dt><dd>refreshing. refreshing. refreshing.</dd>
+          <dt>os</dt><dd>██████████</dd>
+        </dl>
+
+        <button class="hold" aria-label="Hold to install Jealousy Beta">
+          <svg class="hold-ring" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="54"/></svg>
+          <span class="hold-txt">hold to install<br><small>(don't)</small></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="q-tape q-tape-b" aria-hidden="true"><div class="q-run"><span>xoxo.exe ♥ it's not a bug ♥ xoxo.exe ♥ it's not a bug ♥ xoxo.exe ♥ it's not a bug ♥&nbsp;</span><span>xoxo.exe ♥ it's not a bug ♥ xoxo.exe ♥ it's not a bug ♥ xoxo.exe ♥ it's not a bug ♥&nbsp;</span></div></div>
+  </section>
+
+  <!-- ═════════════ 06 · NEXT ═════════════ -->
+  <a href="campaign.html" class="p-next torn" style="--torn:#070608">
+    <span class="next-k">next file</span>
+    <span class="next-t">Campaign <i>→</i></span>
+    <span class="next-s">the SS04 issue — feel everything, install nothing</span>
+  </a>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <span class="foot-logo">xoxo.exe</span>
+    <p>formerly xoxo labs. we engineered feelings.<br>the feelings engineered us back.</p>
+  </div>
+  <div class="foot-row foot-small">
+    <span>© 2026 xoxo labs — all feelings reserved</span>
+    <button class="shutdown">⏻ shut down</button>
+    <span class="pixel">Online Now!</span>
+  </div>
+</footer>
+
+<!-- shared shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="burst" d="M100 0 L112 78 L190 30 L122 92 L200 100 L122 108 L190 170 L112 122 L100 200 L88 122 L10 170 L78 108 L0 100 L78 92 L10 30 L88 78 Z"/>
+    <path id="burst2" d="M100 0 L108 86 L170 20 L114 92 L200 100 L114 108 L170 180 L108 114 L100 200 L92 114 L30 180 L86 108 L0 100 L86 92 L30 20 L92 86 Z"/>
+  </defs>
+</svg>
+
+<script src="core.js"></script>
+<script src="products.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

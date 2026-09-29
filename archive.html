@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Archive — xoxo.exe</title>
+  <meta name="description" content="4,812,339 messages never sent. Search them. Leave yours." />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="archive.css" />
+</head>
+<body>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ OVERLAYS ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="dots" aria-hidden="true"></div>
+<div class="edge-stickers" aria-hidden="true"></div>
+<div class="alerts"></div>
+<div class="crt-off" aria-hidden="true"><p>just kidding.<br><em>you can't shut down a feeling.</em></p></div>
+
+<!-- artifact viewer (opens when you click a message) -->
+<div class="viewer" role="dialog" aria-modal="true" aria-label="Archived message" aria-hidden="true">
+  <div class="viewer-card">
+    <button class="viewer-x" aria-label="Close">✕ close</button>
+    <figure class="slot viewer-img" data-file="img/ARCHIVE/room-ex.jpg"><img alt=""></figure>
+    <div class="viewer-body">
+      <span class="viewer-id">artifact no. <b>000000</b></span>
+      <p class="viewer-msg"></p>
+      <dl class="viewer-meta">
+        <dt>to</dt><dd class="vm-to"></dd>
+        <dt>written</dt><dd class="vm-time"></dd>
+        <dt>rewritten</dt><dd class="vm-drafts"></dd>
+        <dt>status</dt><dd class="vm-status">unsent</dd>
+      </dl>
+      <button class="send-anyway">Send anyway <span>→</span></button>
+      <p class="send-log" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ TASKBAR (main nav) ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<nav class="taskbar" aria-label="Main">
+  <button class="start" aria-label="Start — open the lab computer">
+    <span class="start-mark">♥</span><span class="start-label" data-clean="xoxo labs" data-dirty="start">xoxo labs</span>
+  </button>
+
+  <div class="task-links">
+    <a href="index.html" class="task">Home</a>
+    <a href="products.html" class="task">Products</a>
+    <a href="campaign.html" class="task">Campaign</a>
+    <a href="archive.html" class="task">The Archive</a>
+    <a href="outbreak.html" class="task">Outbreak</a>
+    <a href="patch-notes.html" class="task">Patch Notes</a>
+  </div>
+
+  <div class="tray">
+    <span class="tray-state"><i></i><b>all feelings stable</b></span>
+    <span class="tray-clock">00:00</span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ═════════════ 01 · HERO — the message rain ═════════════ -->
+  <section class="a-hero">
+    <div class="rain" aria-hidden="true"></div>
+
+    <header class="a-top">
+      <a href="index.html" class="wordmark">xoxo <span>labs</span></a>
+      <span>unsent_messages.db — read only</span>
+      <span class="a-live"><i></i> recording</span>
+    </header>
+
+    <div class="a-hero-center">
+      <p class="kicker pink">the archive</p>
+      <h1 class="a-title">
+        <span class="ln"><span>Everything</span></span>
+        <span class="ln"><span>you <em>never</em></span></span>
+        <span class="ln"><span>sent.</span></span>
+      </h1>
+      <p class="a-count"><b class="a-num">4,812,339</b> messages recovered — and counting</p>
+    </div>
+
+    <figure class="slot a-float af-1" data-file="img/ARCHIVE/hero-1.jpg"><img src="img/ARCHIVE/hero-1.jpg" alt=""></figure>
+    <figure class="slot a-float af-2" data-file="img/ARCHIVE/hero-2.jpg"><img src="img/ARCHIVE/hero-2.jpg" alt=""></figure>
+    <figure class="slot a-float af-3" data-file="img/ARCHIVE/hero-3.jpg"><img src="img/ARCHIVE/hero-3.jpg" alt=""></figure>
+
+    <span class="a-scroll">scroll to search ↓</span>
+  </section>
+
+  <!-- ═════════════ 02 · SEARCH ═════════════ -->
+  <section class="a-search torn" style="--torn:#0c0b0d" id="search">
+    <div class="search-head">
+      <h2>Search the <em>archive.</em></h2>
+      <p>Type a word. Somebody almost said it.</p>
+    </div>
+
+    <label class="searchbar">
+      <span class="sr-only">Search unsent messages</span>
+      <span class="sb-icon" aria-hidden="true">⌕</span>
+      <input type="search" id="q" placeholder="" autocomplete="off" spellcheck="false">
+      <span class="sb-count"><b id="hits">0</b> results</span>
+    </label>
+
+    <div class="rooms-filter" role="group" aria-label="Filter by recipient">
+      <button class="rf rf-fy" data-r="foryou">for you ✦</button>
+      <button class="rf is-on" data-r="all">everyone</button>
+      <button class="rf" data-r="ex">the ex</button>
+      <button class="rf" data-r="crush">the crush</button>
+      <button class="rf" data-r="bestie">best friend</button>
+      <button class="rf" data-r="mom">mom</button>
+      <button class="rf" data-r="me">yourself</button>
+    </div>
+
+    <aside class="algo" aria-label="What the algorithm learned about you">
+      <div class="algo-head">
+        <span class="algo-dot"></span>
+        <b>xoxo.algorithm v0.3</b>
+        <span class="algo-sub">what it learned about you · <span class="algo-conf">0</span>% sure</span>
+      </div>
+      <div class="algo-bars"></div>
+      <p class="algo-why">it doesn't know you yet. open a message. search something. linger.</p>
+    </aside>
+
+    <div class="results" aria-live="polite"></div>
+    <p class="no-results">nothing found. <em>maybe you actually sent that one.</em></p>
+  </section>
+
+  <!-- ═════════════ 03 · ROOMS — stacked cards ═════════════ -->
+  <section class="a-rooms">
+    <div class="rooms-intro">
+      <p class="kicker">the collection</p>
+      <h2>Five rooms. <em>One for everyone you couldn't text.</em></h2>
+    </div>
+
+    <div class="stack">
+      <article class="room" data-r="ex" style="--c:#ff2fbf">
+        <div class="room-inner">
+          <span class="room-n">room 01</span>
+          <h3 class="room-name">The Ex</h3>
+          <p class="room-count"><b>1,902,114</b> artifacts</p>
+          <ul class="room-quotes">
+            <li>"i still have ur hoodie"</li>
+            <li>"do you ever think about the car ride"</li>
+            <li>"congrats on the new girl. she seems nice. i hate it"</li>
+          </ul>
+          <button class="room-open" data-r="ex">browse room →</button>
+        </div>
+        <figure class="slot room-img" data-file="img/ARCHIVE/room-ex.jpg"><img src="img/ARCHIVE/room-ex.jpg" alt=""></figure>
+      </article>
+
+      <article class="room" data-r="crush" style="--c:#c9ff1f">
+        <div class="room-inner">
+          <span class="room-n">room 02</span>
+          <h3 class="room-name">The Crush</h3>
+          <p class="room-count"><b>1,344,870</b> artifacts</p>
+          <ul class="room-quotes">
+            <li>"i think i liked u more than i said"</li>
+            <li>"what song is that on ur story"</li>
+            <li>"ok this is random but"</li>
+          </ul>
+          <button class="room-open" data-r="crush">browse room →</button>
+        </div>
+        <figure class="slot room-img" data-file="img/ARCHIVE/room-crush.jpg"><img src="img/ARCHIVE/room-crush.jpg" alt=""></figure>
+      </article>
+
+      <article class="room" data-r="bestie" style="--c:#a6f4e6">
+        <div class="room-inner">
+          <span class="room-n">room 03</span>
+          <h3 class="room-name">Best Friend</h3>
+          <p class="room-count"><b>781,203</b> artifacts</p>
+          <ul class="room-quotes">
+            <li>"i'm sorry i missed your birthday"</li>
+            <li>"we don't talk like we used to"</li>
+            <li>"i saw the photos. i wasn't invited. it's fine"</li>
+          </ul>
+          <button class="room-open" data-r="bestie">browse room →</button>
+        </div>
+        <figure class="slot room-img" data-file="img/ARCHIVE/room-bestie.jpg"><img src="img/ARCHIVE/room-bestie.jpg" alt=""></figure>
+      </article>
+
+      <article class="room" data-r="mom" style="--c:#ffd3f1">
+        <div class="room-inner">
+          <span class="room-n">room 04</span>
+          <h3 class="room-name">Mom</h3>
+          <p class="room-count"><b>512,660</b> artifacts</p>
+          <ul class="room-quotes">
+            <li>"you were right about him"</li>
+            <li>"can i come home for a bit"</li>
+            <li>"i love you. that's it. that's the message"</li>
+          </ul>
+          <button class="room-open" data-r="mom">browse room →</button>
+        </div>
+        <figure class="slot room-img" data-file="img/ARCHIVE/room-mom.jpg"><img src="img/ARCHIVE/room-mom.jpg" alt=""></figure>
+      </article>
+
+      <article class="room" data-r="me" style="--c:#ffffff">
+        <div class="room-inner">
+          <span class="room-n">room 05</span>
+          <h3 class="room-name">Yourself</h3>
+          <p class="room-count"><b>271,492</b> artifacts</p>
+          <ul class="room-quotes">
+            <li>"you're doing better than you think"</li>
+            <li>"stop checking"</li>
+            <li>"note to self: you deserved more"</li>
+          </ul>
+          <button class="room-open" data-r="me">browse room →</button>
+        </div>
+        <figure class="slot room-img" data-file="img/ARCHIVE/room-me.jpg"><img src="img/ARCHIVE/room-me.jpg" alt=""></figure>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═════════════ 04 · DRAFT REPLAY (pinned) ═════════════ -->
+  <section class="a-drafts torn" style="--torn:#f1efea" id="drafts">
+    <div class="drafts-stage">
+      <div class="drafts-copy">
+        <p class="kicker pink">artifact no. 000413 — replay</p>
+        <h2>One message.<br><em>Fourteen drafts.</em></h2>
+        <p>Scroll to replay every version, exactly as it was typed and deleted.</p>
+      </div>
+
+      <div class="composer">
+        <div class="composer-top"><span class="c-av"></span><b>███████</b><i class="c-status">typing…</i></div>
+        <div class="composer-body">
+          <p class="c-hist">last message: <em>"ok goodnight"</em> — 214 days ago</p>
+        </div>
+        <div class="composer-input">
+          <p class="c-text"><span class="c-typed"></span><span class="c-caret">|</span></p>
+          <span class="c-send">↑</span>
+        </div>
+        <div class="c-meta"><span class="c-draft">draft 01 / 14</span><span class="c-clock">01:02AM</span></div>
+      </div>
+
+      <ol class="versions" aria-hidden="true"></ol>
+    </div>
+  </section>
+
+  <!-- ═════════════ 05 · VOICE NOTES ═════════════ -->
+  <section class="a-voice torn" style="--torn:#0c0b0d">
+    <div class="voice-head">
+      <p class="kicker">audio artifacts</p>
+      <h2>Voice notes <em>held too long.</em></h2>
+      <p>Recorded. Listened back. Never sent. They're encrypted now — press play and you'll hear the data before the words. <span class="mono">(sound on ♪)</span></p>
+    </div>
+
+    <div class="vnotes">
+      <div class="vn" data-t="hey it's me. i know it's late. i just wanted to say… no. never mind. forget it. goodnight.">
+        <button class="vn-play" aria-label="Play voice note 1"><span>▶</span></button>
+        <canvas class="vn-wave"></canvas>
+        <span class="vn-dur">0:14</span>
+        <p class="vn-meta">to: the ex · 02:47AM · re‑recorded 6 times</p>
+        <p class="vn-tr"></p>
+      </div>
+      <div class="vn" data-t="okay so this is really embarrassing but i've had a crush on you since like, march. you don't have to say anything. actually please don't.">
+        <button class="vn-play" aria-label="Play voice note 2"><span>▶</span></button>
+        <canvas class="vn-wave"></canvas>
+        <span class="vn-dur">0:21</span>
+        <p class="vn-meta">to: the crush · 11:58PM · held for 3 minutes, then deleted</p>
+        <p class="vn-tr"></p>
+      </div>
+      <div class="vn" data-t="mom, it's me. nothing's wrong. i just wanted to hear your voice. call me back. or don't, it's fine. love you.">
+        <button class="vn-play" aria-label="Play voice note 3"><span>▶</span></button>
+        <canvas class="vn-wave"></canvas>
+        <span class="vn-dur">0:11</span>
+        <p class="vn-meta">to: mom · 04:10AM · never sent</p>
+        <p class="vn-tr"></p>
+      </div>
+      <div class="vn vn-bad" data-t="this is xoxo.exe. i have listened to all of them. every single one. i'm going to send them now. you're welcome ♥">
+        <button class="vn-play" aria-label="Play voice note 4"><span>▶</span></button>
+        <canvas class="vn-wave"></canvas>
+        <span class="vn-dur">?:??</span>
+        <p class="vn-meta">to: everyone · 03:12AM · source unknown</p>
+        <p class="vn-tr"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════ 06 · DONATE ═════════════ -->
+  <section class="a-donate torn" style="--torn:#f1efea">
+    <div class="donate-copy">
+      <p class="kicker pink">donate an artifact</p>
+      <h2>Leave the message <em>you'll never send.</em></h2>
+      <p>It stays here, on this device. Nobody receives it. That's the point.</p>
+    </div>
+
+    <form class="donate-form" autocomplete="off">
+      <div class="df-top"><span>to:</span><input type="text" id="d-to" maxlength="28" placeholder="someone" aria-label="Who is it for"></div>
+      <textarea id="d-msg" maxlength="220" rows="4" placeholder="type it. you won't press send anyway." aria-label="Your message"></textarea>
+      <div class="df-bot">
+        <span class="df-len"><b>0</b>/220</span>
+        <button type="submit" class="df-go">Archive it ♥</button>
+      </div>
+      <div class="shreds" aria-hidden="true"></div>
+    </form>
+
+    <p class="donate-done" aria-live="polite"></p>
+  </section>
+
+  <!-- ═════════════ 07 · NEXT ═════════════ -->
+  <a href="outbreak.html" class="a-next torn" style="--torn:#ff2fbf">
+    <span class="next-k">next file</span>
+    <span class="next-t">Outbreak <i>→</i></span>
+    <span class="next-s">where the messages went</span>
+  </a>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <span class="foot-logo">xoxo.exe</span>
+    <p>formerly xoxo labs. we engineered feelings.<br>the feelings engineered us back.</p>
+  </div>
+  <div class="foot-row foot-small">
+    <span>© 2026 xoxo labs — all feelings reserved</span>
+    <button class="shutdown">⏻ shut down</button>
+    <span class="pixel">Online Now!</span>
+  </div>
+</footer>
+
+<!-- shared shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="burst" d="M100 0 L112 78 L190 30 L122 92 L200 100 L122 108 L190 170 L112 122 L100 200 L88 122 L10 170 L78 108 L0 100 L78 92 L10 30 L88 78 Z"/>
+    <path id="burst2" d="M100 0 L108 86 L170 20 L114 92 L200 100 L114 108 L170 180 L108 114 L100 200 L92 114 L30 180 L86 108 L0 100 L86 92 L30 20 L92 86 Z"/>
+  </defs>
+</svg>
+
+<script src="core.js"></script>
+<script src="archive.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

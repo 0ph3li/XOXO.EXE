@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xoxo.exe — we engineer feelings</title>
+  <meta name="description" content="xoxo labs engineers feelings as software. Something went wrong." />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body class="is-loading">
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ BOOT ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="boot" aria-hidden="true">
+  <div class="boot-box">
+    <div class="boot-logo">xoxo <span>labs</span></div>
+    <div class="boot-bar"><i></i></div>
+    <div class="boot-meta"><span class="boot-step">initializing feelings…</span><span class="boot-pct">000%</span></div>
+  </div>
+  <div class="boot-flash">xoxo.exe</div>
+</div>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ OVERLAYS ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="dots" aria-hidden="true"></div>
+<div class="edge-stickers" aria-hidden="true"></div>
+<div class="alerts"></div>
+<figure class="hover-peek slot" data-file="img/INDEX/symptom-1.jpg" aria-hidden="true"><img alt=""></figure>
+<div class="dx" role="dialog" aria-modal="true" aria-label="Diagnosis" aria-hidden="true">
+  <div class="dx-card">
+    <div class="dx-head"><span>xoxo labs — clinical file</span><span class="dx-code">XO-000</span><button class="dx-x" aria-label="Close">✕ close</button></div>
+    <div class="dx-grid">
+      <figure class="slot dx-img"><img alt=""></figure>
+      <div class="dx-body">
+        <p class="dx-k">diagnosis</p>
+        <h3 class="dx-name"></h3>
+        <dl class="dx-meta">
+          <dt>severity</dt><dd class="dx-sev"></dd>
+          <dt>first reported</dt><dd class="dx-first"></dd>
+          <dt>cause</dt><dd>xoxo.exe</dd>
+        </dl>
+        <p class="dx-desc"></p>
+        <p class="dx-treat"><b>treatment:</b> <span></span></p>
+        <a class="dx-go" href="#"><span></span> →</a>
+      </div>
+    </div>
+    <span class="dx-stamp">DIAGNOSED</span>
+  </div>
+</div>
+<div class="card-stage" aria-hidden="true"><span class="card-stage-x">✕ close</span></div>
+<div class="crt-off" aria-hidden="true"><p>just kidding.<br><em>you can't shut down a feeling.</em></p></div>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ TASKBAR (main nav) ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<nav class="taskbar" aria-label="Main">
+  <button class="start" aria-label="Start — open the lab computer">
+    <span class="start-mark">♥</span><span class="start-label" data-clean="xoxo labs" data-dirty="start">xoxo labs</span>
+  </button>
+
+  <div class="task-links">
+    <a href="index.html" class="task is-on">Home</a>
+    <a href="products.html" class="task">Products</a>
+    <a href="campaign.html" class="task">Campaign</a>
+    <a href="archive.html" class="task">The Archive</a>
+    <a href="outbreak.html" class="task">Outbreak</a>
+    <a href="patch-notes.html" class="task">Patch Notes</a>
+  </div>
+
+  <div class="tray">
+    <span class="tray-state"><i></i><b>all feelings stable</b></span>
+    <span class="tray-clock">00:00</span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ═════════════ 01 · HERO ═════════════ -->
+  <section class="s-hero" data-theme="clean">
+    <header class="hero-top">
+      <span class="wordmark">xoxo <span>labs</span></span>
+      <span class="hero-top-mid">emotional software since 2004</span>
+      <span class="hero-top-right">v4.0.2 — now shipping</span>
+    </header>
+
+    <h1 class="hero-title" aria-label="We engineer feelings.">
+      <span class="ln"><span>We</span></span>
+      <span class="ln"><span>engineer</span></span>
+      <span class="ln"><span><em>feelings.</em></span></span>
+    </h1>
+
+    <figure class="slot hero-shot" data-file="img/INDEX/hero.jpg"><img src="img/INDEX/hero.jpg" alt=""></figure>
+
+    <div class="hero-bottom">
+      <p class="hero-lede">Crush, closure, heartbreak — rewritten as clean, stable, version‑controlled software. Install once. Feel forever.</p>
+      <div class="hero-specs">
+        <div><span>installs</span><b>12.4M</b></div>
+        <div><span>uptime</span><b>99.98%</b></div>
+        <div><span>known bugs</span><b>0</b></div>
+      </div>
+      <span class="scroll-cue">scroll<i></i></span>
+    </div>
+  </section>
+
+  <!-- ═════════════ 02 · MANIFESTO ═════════════ -->
+  <section class="s-manifesto" data-theme="clean">
+    <p class="kicker">our belief</p>
+    <p class="manifesto">
+      Feelings are just code. Messy, undocumented, full of bugs. At xoxo labs we clean them up — we record them, compile them and ship them back to you as stable software. No more 3AM. No more almost. No more <em class="manifesto-last">unsent.</em>
+    </p>
+  </section>
+
+  <!-- ═════════════ 03 · STATS ═════════════ -->
+  <section class="s-stats" data-theme="clean">
+    <div class="stat"><b data-count="12.4" data-dec="1" data-suf="M">0</b><span>hearts running xoxo</span></div>
+    <div class="stat"><b data-count="5">0</b><span>flagship programs</span></div>
+    <div class="stat"><b data-count="99.98" data-dec="2" data-suf="%">0</b><span>emotional uptime</span></div>
+    <div class="stat stat-bug"><b>0</b><span>known bugs</span></div>
+  </section>
+
+  <!-- ═════════════ 04 · PRODUCTS (horizontal) ═════════════ -->
+  <section class="s-products" data-theme="clean">
+    <div class="hx">
+      <div class="hx-track">
+        <div class="hx-intro">
+          <p class="kicker">product line — 2004/2026</p>
+          <h2>Feelings,<br><em>as a service.</em></h2>
+          <p>Five programs. Tested on millions of hearts. Almost no side effects.</p>
+          <span class="hx-hint"><span class="hint-desk">keep scrolling →</span><span class="hint-touch">swipe →</span></span>
+        </div>
+
+        <article class="prod">
+          <figure class="slot" data-file="img/INDEX/product-crush.jpg"><img src="img/INDEX/product-crush.jpg" alt=""></figure>
+          <div class="prod-info"><span class="prod-n">01</span><h3>Crush 2.0</h3><p>Butterflies on demand. Now with 40% less overthinking.</p><span class="prod-tag ok">stable · v2.0</span></div>
+        </article>
+        <article class="prod">
+          <figure class="slot" data-file="img/INDEX/product-heartbreak.jpg"><img src="img/INDEX/product-heartbreak.jpg" alt=""></figure>
+          <div class="prod-info"><span class="prod-n">02</span><h3>Heartbreak Patch</h3><p>Silent install. Removes 3AM texting habits automatically.</p><span class="prod-tag ok">stable · v1.9</span></div>
+        </article>
+        <article class="prod">
+          <figure class="slot" data-file="img/INDEX/product-closure.jpg"><img src="img/INDEX/product-closure.jpg" alt=""></figure>
+          <div class="prod-info"><span class="prod-n">03</span><h3>Closure.dmg</h3><p>Mount, drag, forget. Compatible with most exes.</p><span class="prod-tag warn">beta · v0.8</span></div>
+        </article>
+        <article class="prod">
+          <figure class="slot" data-file="img/INDEX/product-situationship.jpg"><img src="img/INDEX/product-situationship.jpg" alt=""></figure>
+          <div class="prod-info"><span class="prod-n">04</span><h3>Situationship Lite</h3><p>All the feelings, none of the labels. Trial never expires.</p><span class="prod-tag warn">unlabeled · v?.?</span></div>
+        </article>
+        <article class="prod prod-bad">
+          <figure class="slot" data-file="img/INDEX/product-jealosy.jpg"><img src="img/INDEX/product-jealosy.jpg" alt=""></figure>
+          <div class="prod-info"><span class="prod-n">05</span><h3 class="prod-glitch">Jealousy Beta</h3><p>ERR_0x0X0 — process not responding. do not open. do not open. do n</p><span class="prod-tag bad">corrupted</span></div>
+        </article>
+      </div>
+      <div class="hx-progress"><i></i></div>
+    </div>
+  </section>
+
+  <!-- ═════════════ 05 · HOW IT WORKS ═════════════ -->
+  <section class="s-how" data-theme="clean">
+    <p class="kicker">how it works</p>
+    <h2>Three steps to <em>never feel wrong again.</em></h2>
+
+    <div class="how-steps">
+      <svg class="how-line" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 H1000"/></svg>
+      <div class="step"><span class="step-n">01</span><h3>Record</h3><p>We capture the feeling at the source — heartbeat, playlist, drafts folder.</p></div>
+      <div class="step"><span class="step-n">02</span><h3>Compile</h3><p>Our engineers remove the bugs: doubt, jealousy, the 3AM part.</p></div>
+      <div class="step step-3"><span class="step-n">03</span><h3>Install</h3><p>Stable feelings, delivered. <span class="whisper">we kept a copy of everything.</span></p></div>
+    </div>
+  </section>
+
+  <!-- ═════════════ 06 · VOICES ═════════════ -->
+  <section class="s-voices" data-theme="clean">
+    <p class="kicker">what users say</p>
+    <div class="voices">
+      <blockquote class="voice">
+        <p>"I haven't cried since v2.0. My therapist is honestly confused."</p>
+        <footer><figure class="slot av" data-file="img/INDEX/archive-1.jpg"><img src="img/INDEX/archive-1.jpg" alt=""></figure><span>Giulia, 24 — Crush 2.0</span></footer>
+      </blockquote>
+      <blockquote class="voice">
+        <p>"Installed Closure.dmg on a Tuesday. By Wednesday I forgot his name."</p>
+        <footer><figure class="slot av" data-file="img/INDEX/product-crush.jpg"><img src="img/INDEX/product-crush.jpg" alt=""></figure><span>Mina, 21 — Closure.dmg</span></footer>
+      </blockquote>
+      <blockquote class="voice voice-bad">
+        <p class="voice-text" data-dirty="&quot;i still check his location every night. please make it stop.&quot;">"Five stars. Everything is completely under control."</p>
+        <footer><figure class="slot av" data-file="img/INDEX/product-closure.jpg"><img src="img/INDEX/product-closure.jpg" alt=""></figure><span class="voice-who">Sofia, 23 — Heartbreak Patch</span></footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ═════════════ 07 · BREACH ═════════════ -->
+  <section class="s-breach">
+    <div class="breach-stage">
+      <div class="tear" aria-hidden="true">
+        <!-- 8 slices of the same sentence, torn apart on scroll -->
+        <div class="tear-slice"><p>Everything is<br>under control.</p></div>
+        <div class="tear-slice"><p>Everything is<br>under control.</p></div>
+        <div class="tear-slice"><p>Everything is<br>under control.</p></div>
+        <div class="tear-slice"><p>Everything is<br>under control.</p></div>
+        <div class="tear-slice"><p>Everything is<br>under control.</p></div>
+        <div class="tear-slice"><p>Everything is<br>under control.</p></div>
+        <div class="tear-slice"><p>Everything is<br>under control.</p></div>
+        <div class="tear-slice"><p>Everything is<br>under control.</p></div>
+      </div>
+      <h2 class="big-mask fill">xoxo</h2>
+      <svg class="burst br-a" viewBox="0 0 200 200" aria-hidden="true"><use href="#burst"/></svg>
+      <svg class="burst br-b" viewBox="0 0 200 200" aria-hidden="true"><use href="#burst2"/></svg>
+      <p class="breach-line"><em>something is leaking.</em></p>
+      <p class="breach-code">03.14.2004 — 03:12AM — source: unsent_messages.db — containment: <b>failed</b></p>
+    </div>
+  </section>
+
+  <!-- ═════════════ 08 · TAPES ═════════════ -->
+  <section class="s-tapes" aria-hidden="true">
+    <div class="tape tape-a"><div class="tape-run"><span>UNSENT MESSAGE RECOVERED ✦ are u up ✦ i miss u ✦ nvm ✦ we should talk ✦ lol jk ✦&nbsp;</span><span>UNSENT MESSAGE RECOVERED ✦ are u up ✦ i miss u ✦ nvm ✦ we should talk ✦ lol jk ✦&nbsp;</span></div></div>
+    <div class="tape tape-b"><div class="tape-run"><span>xoxo.exe ♥ do not open ♥ xoxo.exe ♥ do not open ♥ xoxo.exe ♥ do not open ♥&nbsp;</span><span>xoxo.exe ♥ do not open ♥ xoxo.exe ♥ do not open ♥ xoxo.exe ♥ do not open ♥&nbsp;</span></div></div>
+  </section>
+
+  <!-- ═════════════ 09 · ARCHIVE — chat ═════════════ -->
+  <section class="s-chat">
+    <div class="chat-side">
+      <p class="kicker pink">the archive</p>
+      <h2><em>4,812,339</em> messages never sent.</h2>
+      <p>We trained it on every draft you deleted. <br>Now it sends them for you.</p>
+    </div>
+
+    <div class="phone">
+      <div class="phone-top"><span class="phone-av"></span><b>███████</b><i>last seen 03:11AM</i></div>
+      <div class="thread">
+        <p class="msg me">hey</p>
+        <p class="msg me">are u up</p>
+        <p class="msg me">i saw ur story</p>
+        <p class="msg me">nvm</p>
+        <p class="sys">— 03:12AM · message deleted —</p>
+        <p class="msg me">i still have ur hoodie</p>
+        <p class="msg me">i'm not giving it back</p>
+        <p class="msg me big">i think i liked u more than i said</p>
+        <p class="sys pink">xoxo.exe sent 7 messages on your behalf ♥</p>
+        <p class="msg them">??</p>
+        <p class="msg them">who is this</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════ 10 · ARCHIVE — desk ═════════════ -->
+  <section class="s-desk">
+    <div class="desk-head">
+      <p class="kicker pink">recovered files</p>
+      <h2>Don't open these. <em>(drag them)</em></h2>
+    </div>
+
+    <div class="desk">
+      <figure class="slot polaroid drag d-p1" data-file="img/INDEX/archive-1.jpg"><img src="img/INDEX/archive-1.jpg" alt=""><figcaption>draft_0413.jpg</figcaption></figure>
+      <figure class="slot polaroid drag d-p2" data-file="img/INDEX/archive-12.jpg"><img src="img/INDEX/archive-12.jpg" alt=""><figcaption>never_sent.jpg</figcaption></figure>
+      <figure class="slot polaroid drag d-p3" data-file="img/INDEX/archive-3.jpg"><img src="img/INDEX/archive-3.jpg" alt=""><figcaption>us_2019.jpg</figcaption></figure>
+
+      <div class="note drag d-n1">
+        <div class="note-bar"><span>Untitled - Notepad</span><i>_ ▢ ✕</i></div>
+        <p class="type" data-text="to: ███████&#10;sent: never&#10;&#10;i still have ur hoodie. i'm not giving it back. i'm also not ok."></p>
+      </div>
+      <div class="note drag d-n2">
+        <div class="note-bar"><span>recovered.log</span><i>_ ▢ ✕</i></div>
+        <p class="type" data-text="> restoring 1 of 4,812,339…&#10;> 'come back'&#10;> status: UNSENT ♥"></p>
+      </div>
+      <div class="note drag d-n3">
+        <div class="note-bar"><span>diary.txt</span><i>_ ▢ ✕</i></div>
+        <p class="type" data-text="dear diary&#10;today i installed crush 2.0&#10;it's working&#10;it's working too well"></p>
+      </div>
+
+      <div class="menu drag d-m">
+        <span>Reply</span><span>Copy</span><span>Forward</span><span class="del">Delete</span><span class="send">Send anyway…</span>
+      </div>
+
+      <svg class="burst d-b" viewBox="0 0 200 200" aria-hidden="true"><use href="#burst"/></svg>
+    </div>
+  </section>
+
+  <!-- ═════════════ 11 · COLLAGE / FIELD NOTES ═════════════ -->
+  <section class="s-collage torn" style="--torn:#19171b">
+    <p class="kicker">field notes from the outbreak</p>
+    <h2 class="qq fill">???</h2>
+
+    <figure class="slot cl cl-1" data-speed="-0.25" data-file="img/INDEX/collage-1.jpg"><img src="img/INDEX/collage-1.jpg" alt=""></figure>
+    <figure class="slot cl cl-2" data-speed="0.18" data-file="img/INDEX/collage-2.jpg"><img src="img/INDEX/collage-2.jpg" alt=""></figure>
+    <figure class="slot cl cl-3" data-speed="-0.12" data-file="img/INDEX/collage-3.jpg"><img src="img/INDEX/collage-3.jpg" alt=""></figure>
+    <figure class="slot cl cl-4" data-speed="0.3" data-file="img/INDEX/collage-4.jpg"><img src="img/INDEX/collage-4.jpg" alt=""></figure>
+
+    <div class="script">
+      <p class="script-h">INT. CLUB BATHROOM — 3:12AM</p>
+      <p><b>BIRTHDAY GIRL</b> stares at her phone. The screen is pink. It wasn't pink before.</p>
+      <p class="script-c">BIRTHDAY GIRL</p>
+      <p class="script-d">I didn't send that.</p>
+      <p class="script-c">FRIEND</p>
+      <p class="script-d">It says you did.</p>
+      <p>The music drops. Somewhere, four million phones light up at once.</p>
+    </div>
+
+    <span class="cut c1">NOT</span><span class="cut c2">ME</span><span class="cut c3">i swear</span>
+    <svg class="burst cl-b" viewBox="0 0 200 200" aria-hidden="true"><use href="#burst2"/></svg>
+  </section>
+
+  <!-- ═════════════ 12 · OUTBREAK RADAR ═════════════ -->
+  <section class="s-radar">
+    <div class="radar-wrap">
+      <canvas class="radar" aria-label="Outbreak radar"></canvas>
+      <span class="radar-label">live scan · <b>xoxo.exe</b></span>
+    </div>
+
+    <div class="radar-data">
+      <p class="kicker">outbreak</p>
+      <p class="count-label">infected devices worldwide</p>
+      <p class="count" data-to="23918477">00,000,000</p>
+      <ol class="cases">
+        <li><span>01</span><b>MILANO</b><i>03:12AM</i><em>"are u up"</em></li>
+        <li><span>02</span><b>SEOUL</b><i>01:47AM</i><em>"i saw ur story"</em></li>
+        <li><span>03</span><b>PARIS</b><i>04:04AM</i><em>"come back"</em></li>
+        <li><span>04</span><b>TOKYO</b><i>02:22AM</i><em>"nvm"</em></li>
+        <li><span>05</span><b>LONDON</b><i>00:59AM</i><em>"we should talk"</em></li>
+      </ol>
+      <a href="outbreak.html" class="pill">track the outbreak →</a>
+    </div>
+  </section>
+
+  <!-- ═════════════ 13 · SYMPTOMS ═════════════ -->
+  <section class="s-symptoms torn" style="--torn:#ecebe8">
+    <p class="kicker pink">known symptoms <span class="hint">(click for diagnosis)</span></p>
+    <ul class="symptoms">
+      <li data-img="img/INDEX/symptom-1.jpg" data-code="XO-301" data-first="03:12AM" data-desc="Patient opens a chat that ended months ago and scrolls up. And up. And up. Stops at the good part. Reads it three times. Doesn't reply to anything, because there is nothing left to reply to." data-treat="none. we tried. the chats are archived, not deleted — and so is everything you never sent." data-go="archive.html?q=3AM#search" data-go-label="search the archive for 3AM"><span>01</span><b>rereading old chats at 3AM</b><i>severe</i></li>
+      <li data-img="img/INDEX/symptom-2.jpg" data-code="XO-117" data-first="01:02AM" data-desc="Three dots appear. Disappear. Appear. The other person sees 'typing…' for eleven minutes and receives nothing. Average drafts per message: fourteen." data-treat="watch one message get rewritten fourteen times. recognise yourself. close the app." data-go="archive.html#drafts" data-go-label="replay the fourteen drafts"><span>02</span><b>typing… then deleting</b><i>chronic</i></li>
+      <li data-img="img/INDEX/symptom-3.jpg" data-code="XO-442" data-first="11:47PM" data-desc="Posting a story for one specific viewer. Refreshing the viewers list. They watched it. They didn't reply. Somehow this is both the best and worst news of the day." data-treat="all the feelings, none of the labels. there is a program for this, and it doesn't help." data-go="products.html#situationship" data-go-label="see Situationship Lite"><span>03</span><b>checking who viewed your story</b><i>severe</i></li>
+      <li data-img="img/INDEX/symptom-4.jpg" data-code="XO-001" data-first="10:41PM" data-desc="A playlist, four hours long, made for a person who doesn't know it exists. Every song is a message. None of them are sent. Title: something vague, like 'm'." data-treat="Crush 2.0 includes a playlist generator (one person only). it is our best‑seller. we are not proud." data-go="products.html#crush" data-go-label="open Crush 2.0"><span>04</span><b>a playlist for one person</b><i>terminal</i></li>
+      <li data-img="img/INDEX/symptom-5.jpg" data-code="XO-777" data-first="03:12AM" data-desc="Pink glitter found on the phone, the pillow, the keyboard, the inside of a coat pocket. Nobody owns glitter. It is the first visible sign that xoxo.exe is running." data-treat="read the public safety notice. do not listen to 'that song'. stay offline after 3AM." data-go="outbreak.html#rules" data-go-label="read the safety rules"><span>05</span><b>glitter in unexplained places</b><i>mild</i></li>
+      <li data-img="img/INDEX/symptom-6.jpg" data-code="XO-000" data-first="always" data-desc="Said 41 times a week, mostly to people who asked properly. Typed instantly, never deleted. The most sent message in the history of the archive, and the least true." data-treat="there is a room in the archive with messages people wrote to themselves. start there." data-go="archive.html?room=me#search" data-go-label="open the room 'Yourself'"><span>06</span><b>"i'm fine" (not fine)</b><i>terminal</i></li>
+    </ul>
+  </section>
+
+  <!-- ═════════════ 14 · INFECTION CARD ═════════════ -->
+  <section class="s-card torn" style="--torn:#0c0b0d">
+    <div class="card-form">
+      <p class="kicker">self‑diagnosis</p>
+      <h2>Get your <em>infection card.</em></h2>
+      <label>full name<input type="text" id="f-name" maxlength="22" placeholder="your name" autocomplete="off"></label>
+      <label>infected by<input type="text" id="f-by" maxlength="22" placeholder="a certain someone" autocomplete="off"></label>
+      <label>strain
+        <select id="f-strain">
+          <option>Crush 2.0</option>
+          <option>Heartbreak Patch</option>
+          <option>Closure.dmg</option>
+          <option>Situationship Lite</option>
+          <option>Jealousy Beta</option>
+        </select>
+      </label>
+      <p class="card-note">nothing you type leaves this page ♥</p>
+      <p class="card-hint">click the card to enlarge ⤢</p>
+    </div>
+
+    <div class="card-zone">
+      <div class="idcard" role="button" tabindex="0" aria-label="Enlarge your infection card">
+        <figure class="slot id-photo" data-file="img/INDEX/card.jpg"><img src="img/INDEX/card.jpg" alt=""></figure>
+        <span class="id-photo-cap">frontal view</span>
+        <div class="id-body">
+          <h3><span>XOXO.EXE</span><br><span>INFECTED</span><br>PATIENT</h3>
+          <div class="id-field"><b id="c-name">Your Name</b><small>full name</small></div>
+          <div class="id-field"><b id="c-by">a certain someone</b><small>infected by</small></div>
+          <div class="id-field"><b id="c-strain">Crush 2.0</b><small>strain</small></div>
+          <div class="id-field"><b id="c-date">—</b><small>date of infection</small></div>
+        </div>
+        <span class="id-no">No. <b id="c-no">000000</b></span>
+        <svg class="id-burst" viewBox="0 0 200 200" aria-hidden="true"><use href="#burst"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════ 15 · END ═════════════ -->
+  <section class="s-end torn" style="--torn:#f1efea">
+    <figure class="slot end-img e1" data-file="img/INDEX/symptom-5.jpg"><img src="img/INDEX/symptom-5.jpg" alt=""></figure>
+    <figure class="slot end-img e2" data-file="img/INDEX/symptom-6.jpg"><img src="img/INDEX/symptom-6.jpg" alt=""></figure>
+    <figure class="slot end-img e3" data-file="img/INDEX/collage-3.jpg"><img src="img/INDEX/collage-3.jpg" alt=""></figure>
+
+    <h2 class="end-title"><span>xoxo</span><span>.exe</span></h2>
+    <p class="end-sub"><em>it's not a bug.</em> it's a feeling.</p>
+    <div class="end-links">
+      <a href="products.html" class="xp">Products</a>
+      <a href="campaign.html" class="xp">Campaign</a>
+      <a href="archive.html" class="xp">The Archive</a>
+      <a href="outbreak.html" class="xp">Outbreak</a>
+      <a href="patch-notes.html" class="xp">Patch Notes</a>
+    </div>
+    <svg class="burst end-b1" viewBox="0 0 200 200" aria-hidden="true"><use href="#burst2"/></svg>
+    <svg class="burst end-b2" viewBox="0 0 200 200" aria-hidden="true"><use href="#burst"/></svg>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <span class="foot-logo">xoxo.exe</span>
+    <p>formerly xoxo labs. we engineered feelings.<br>the feelings engineered us back.</p>
+  </div>
+  <div class="foot-row foot-small">
+    <span>© 2026 xoxo labs — all feelings reserved</span>
+    <button class="shutdown">⏻ shut down</button>
+    <span class="pixel">Online Now!</span>
+  </div>
+</footer>
+
+<!-- shared shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="burst" d="M100 0 L112 78 L190 30 L122 92 L200 100 L122 108 L190 170 L112 122 L100 200 L88 122 L10 170 L78 108 L0 100 L78 92 L10 30 L88 78 Z"/>
+    <path id="burst2" d="M100 0 L108 86 L170 20 L114 92 L200 100 L114 108 L170 180 L108 114 L100 200 L92 114 L30 180 L86 108 L0 100 L86 92 L30 20 L92 86 Z"/>
+  </defs>
+</svg>
+
+<script src="core.js"></script>
+<script src="home.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

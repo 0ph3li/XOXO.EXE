@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>you — xoxo.exe</title>
+  <meta name="description" content="The last page is about you." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="you.css" />
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="edge-stickers" aria-hidden="true"></div>
+<div class="alerts"></div>
+<span class="ghost" aria-hidden="true"><svg viewBox="0 0 22 26"><path d="M2 2 L2 20 L7 15.5 L10.5 23 L14 21.5 L10.5 14.5 L17 14.5 Z"/></svg></span>
+<p class="whisper" aria-live="polite"></p>
+<div class="crt-off" aria-hidden="true"><p>just kidding.<br><em>you can't shut down a feeling.</em></p></div>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ TASKBAR (main nav) ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<nav class="taskbar" aria-label="Main">
+  <button class="start" aria-label="Start — open the lab computer">
+    <span class="start-mark">♥</span><span class="start-label" data-clean="xoxo labs" data-dirty="start">xoxo labs</span>
+  </button>
+
+  <div class="task-links">
+    <a href="index.html" class="task">Home</a>
+    <a href="products.html" class="task">Products</a>
+    <a href="campaign.html" class="task">Campaign</a>
+    <a href="archive.html" class="task">The Archive</a>
+    <a href="outbreak.html" class="task">Outbreak</a>
+    <a href="patch-notes.html" class="task">Patch Notes</a>
+  </div>
+
+  <div class="tray">
+    <span class="tray-state"><i></i><b>rebooted</b></span>
+    <span class="tray-clock">00:00</span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ═════════════ 01 · HELLO ═════════════ -->
+  <section class="y-hello">
+    <div class="hello-lines" aria-live="polite">
+      <p class="hl hl-1"></p>
+      <p class="hl hl-2"></p>
+      <p class="hl hl-3"></p>
+      <p class="hl hl-4"></p>
+    </div>
+    <span class="y-scroll">scroll ↓</span>
+  </section>
+
+  <!-- ═════════════ 02 · MIRROR — observation log ═════════════ -->
+  <section class="y-mirror">
+    <div class="mirror-stage">
+      <p class="m-k"><i></i> observation log — subject: <b>you</b></p>
+      <div class="m-lines" aria-live="polite"></div>
+      <p class="m-count"><span class="m-n">01</span> / <span class="m-tot">10</span></p>
+    </div>
+  </section>
+
+  <!-- ═════════════ 04 · THE QUESTION ═════════════ -->
+  <section class="y-ask">
+    <div class="ask-copy">
+      <p class="kicker pink">one question</p>
+      <h2>Who did you think about <em>while you were here?</em></h2>
+      <label class="ask-field">
+        <span class="sr-only">A name</span>
+        <input type="text" id="who" maxlength="24" placeholder="just a name. nobody sees it." autocomplete="off" spellcheck="false">
+        <button class="ask-go" aria-label="Confirm">→</button>
+      </label>
+    </div>
+
+    <div class="ask-phone" aria-hidden="true">
+      <div class="ap-top"><span class="ap-av"></span><b class="ap-name">█████</b><i>online</i></div>
+      <div class="ap-body"><p class="ap-hint">you know what you want to say.</p></div>
+      <div class="ap-input"><textarea id="say" rows="2" placeholder="say it" aria-label="Your message"></textarea></div>
+      <div class="ap-act"><button class="ap-del">delete</button><button class="ap-send">send ↑</button></div>
+      <p class="ap-log" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ═════════════ 05 · GOODBYE ═════════════ -->
+  <section class="y-bye torn" style="--torn:#050406">
+    <div class="bye-uninstall">
+      <p class="kicker">uninstalling xoxo.exe</p>
+      <div class="bye-bar"><i></i></div>
+      <p class="bye-step">removing feelings…</p>
+    </div>
+
+    <div class="bye-text">
+      <p>xoxo.exe has left your device.</p>
+      <p>it was never really a virus.</p>
+      <p>it was the part of you that wanted to <em>say something.</em></p>
+    </div>
+
+    <p class="bye-sign"><span>xoxo,</span><em>xoxo.exe</em></p>
+
+    <div class="bye-links">
+      <button class="xp bye-reboot">↺ reboot the site (forget me)</button>
+      <a href="index.html" class="xp">back to home</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- shared shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="burst" d="M100 0 L112 78 L190 30 L122 92 L200 100 L122 108 L190 170 L112 122 L100 200 L88 122 L10 170 L78 108 L0 100 L78 92 L10 30 L88 78 Z"/>
+    <path id="burst2" d="M100 0 L108 86 L170 20 L114 92 L200 100 L114 108 L170 180 L108 114 L100 200 L92 114 L30 180 L86 108 L0 100 L86 92 L30 20 L92 86 Z"/>
+  </defs>
+</svg>
+
+<script src="core.js"></script>
+<script src="you.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

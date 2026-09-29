@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campaign SS04 — xoxo.exe</title>
+  <meta name="description" content="xoxo labs, Spring/Summer 2004 campaign. Feel everything. Install nothing." />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="campaign.css" />
+</head>
+<body>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ OVERLAYS ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="dots" aria-hidden="true"></div>
+<div class="edge-stickers" aria-hidden="true"></div>
+<div class="alerts"></div>
+<div class="crt-off" aria-hidden="true"><p>just kidding.<br><em>you can't shut down a feeling.</em></p></div>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ TASKBAR (main nav) ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<nav class="taskbar" aria-label="Main">
+  <button class="start" aria-label="Start — open the lab computer">
+    <span class="start-mark">♥</span><span class="start-label" data-clean="xoxo labs" data-dirty="start">xoxo labs</span>
+  </button>
+
+  <div class="task-links">
+    <a href="index.html" class="task">Home</a>
+    <a href="products.html" class="task">Products</a>
+    <a href="campaign.html" class="task">Campaign</a>
+    <a href="archive.html" class="task">The Archive</a>
+    <a href="outbreak.html" class="task">Outbreak</a>
+    <a href="patch-notes.html" class="task">Patch Notes</a>
+  </div>
+
+  <div class="tray">
+    <span class="tray-state"><i></i><b>all feelings stable</b></span>
+    <span class="tray-clock">00:00</span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ═════════════ 01 · COVER ═════════════ -->
+  <section class="c-cover">
+    <div class="cover" aria-label="Magazine cover">
+      <figure class="slot cover-photo layer" data-depth="10" data-file="img/CAMPAIGN/cover.jpg"><img src="img/CAMPAIGN/cover.jpg" alt=""></figure>
+
+      <div class="masthead layer" data-depth="26">
+        <span class="mh-top">xoxo labs quarterly</span>
+        <span class="mh-name">xoxo</span>
+      </div>
+
+      <p class="cl cl-issue layer" data-depth="34">SS04 · No. 01 · €4,00</p>
+      <p class="cl cl-main layer" data-depth="40">THE<br>FEELINGS<br>ISSUE</p>
+      <p class="cl cl-a layer" data-depth="30"><b>Crush 2.0</b> we wore it for a week. <em>here's what happened</em></p>
+      <p class="cl cl-b layer" data-depth="36"><b>20 ways</b> to not text him (tonight)</p>
+      <p class="cl cl-c layer" data-depth="32">EXCLUSIVE<br><b>patient zero speaks</b></p>
+      <span class="cover-burst layer" data-depth="48"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#burst"/></svg><b>FREE CD<br>INSIDE!</b></span>
+      <span class="cover-barcode layer" data-depth="20" aria-hidden="true"></span>
+    </div>
+    <p class="cover-hint">spring/summer 2004 campaign — scroll to open the issue</p>
+  </section>
+
+  <!-- ═════════════ 02 · EDITOR'S LETTER ═════════════ -->
+  <section class="c-letter">
+    <div class="spread">
+      <div class="spread-text">
+        <p class="kicker">editor's letter</p>
+        <h2>Feel everything.<br><em>Install nothing.</em></h2>
+        <p class="drop">This season we asked five girls to wear a feeling for seven days. No filters, no labels, no uninstall button. They were photographed at 3AM, in bathrooms, on stairs, in the passenger seat of cars that were going nowhere in particular.</p>
+        <p>What came back wasn't a campaign. It was a confession. We're printing it anyway.</p>
+        <p class="sign">— the xoxo labs team, March 2004</p>
+      </div>
+      <figure class="slot spread-photo" data-file="img/CAMPAIGN/look-1.jpg"><img src="img/CAMPAIGN/look-1.jpg" alt=""></figure>
+    </div>
+  </section>
+
+  <!-- ═════════════ 03 · LOOKS ═════════════ -->
+  <div class="c-looks">
+
+    <!-- look 01: full bleed -->
+    <section class="look look-full">
+      <figure class="slot lf-photo" data-file="img/CAMPAIGN/look-2.jpg"><img src="img/CAMPAIGN/look-2.jpg" alt=""></figure>
+      <p class="lf-vert" aria-hidden="true">CRUSH 2.0</p>
+      <div class="credit"><span>look 01</span><b>Crush 2.0</b><i>butterflies worn on the inside. shot at 01:02AM, after the third "hi".</i></div>
+    </section>
+
+    <!-- look 02–03: diptych -->
+    <section class="look look-dip">
+      <figure class="slot dip-a" data-file="img/CAMPAIGN/look-3.jpg"><img src="img/CAMPAIGN/look-3.jpg" alt=""><figcaption>left — Heartbreak Patch</figcaption></figure>
+      <figure class="slot dip-b" data-file="img/CAMPAIGN/look-4.jpg"><img src="img/CAMPAIGN/look-4.jpg" alt=""><figcaption>right — Situationship Lite</figcaption></figure>
+      <p class="dip-line">Same girl. Same night. <em>Two different feelings.</em></p>
+    </section>
+
+    <!-- look 04: the word is the picture -->
+    <section class="look look-mask">
+      <p class="mask-word fill" data-bg="img/CAMPAIGN/look-5.jpg">CLOSURE</p>
+      <div class="credit credit-center"><span>look 04</span><b>Closure.dmg</b><i>mount, drag, forget. the model asked us not to use her name. we used the word instead.</i></div>
+    </section>
+
+    <!-- look 05: sliced strips -->
+    <section class="look look-strips">
+      <div class="strips" data-img="img/CAMPAIGN/look-6-censored.jpg">
+        <figure class="slot strip s1" data-file="img/CAMPAIGN/look-6-censored.jpg"><img src="img/CAMPAIGN/look-6-censored.jpg" alt=""></figure>
+        <figure class="slot strip s2" aria-hidden="true"><img src="img/CAMPAIGN/look-6-censored.jpg" alt=""></figure>
+        <figure class="slot strip s3" aria-hidden="true"><img src="img/CAMPAIGN/look-6-censored.jpg" alt=""></figure>
+      </div>
+      <div class="credit"><span>look 05</span><b>Jealousy Beta</b><i>recalled after one shoot. the photographer is still checking someone's location.</i></div>
+    </section>
+  </div>
+
+  <!-- ═════════════ 04 · CONTACT SHEET ═════════════ -->
+  <section class="c-sheet">
+    <div class="sheet-head">
+      <p class="kicker pink">contact sheet — roll 03:12</p>
+      <h2>The outtakes. <em>Pick your favourites.</em></h2>
+      <p class="sheet-count"><b>0</b> selected for print</p>
+    </div>
+    <div class="sheet"></div>
+  </section>
+
+  <!-- ═════════════ 05 · BACK COVER ═════════════ -->
+  <section class="c-back">
+    <figure class="slot back-photo" data-file="img/CAMPAIGN/back.jpg"><img src="img/CAMPAIGN/back.jpg" alt=""></figure>
+    <div class="back-ad">
+      <p class="back-brand">xoxo.exe</p>
+      <p class="back-line"><em>it's not a bug.</em><br>it's a feeling.</p>
+      <p class="back-small">available wherever feelings are sold · batteries not included · may cause 3AM</p>
+    </div>
+  </section>
+
+  <!-- ═════════════ 06 · NEXT ═════════════ -->
+  <a href="archive.html" class="c-next torn" style="--torn:#0c0b0d">
+    <span class="next-k">next file</span>
+    <span class="next-t">The Archive <i>→</i></span>
+    <span class="next-s">what the models almost said</span>
+  </a>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <span class="foot-logo">xoxo.exe</span>
+    <p>formerly xoxo labs. we engineered feelings.<br>the feelings engineered us back.</p>
+  </div>
+  <div class="foot-row foot-small">
+    <span>© 2026 xoxo labs — all feelings reserved</span>
+    <button class="shutdown">⏻ shut down</button>
+    <span class="pixel">Online Now!</span>
+  </div>
+</footer>
+
+<!-- shared shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="burst" d="M100 0 L112 78 L190 30 L122 92 L200 100 L122 108 L190 170 L112 122 L100 200 L88 122 L10 170 L78 108 L0 100 L78 92 L10 30 L88 78 Z"/>
+    <path id="burst2" d="M100 0 L108 86 L170 20 L114 92 L200 100 L114 108 L170 180 L108 114 L100 200 L92 114 L30 180 L86 108 L0 100 L86 92 L30 20 L92 86 Z"/>
+  </defs>
+</svg>
+
+<script src="core.js"></script>
+<script src="campaign.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patch Notes — xoxo.exe</title>
+  <meta name="description" content="Every version of xoxo, from the first feeling to the last. The final notes were not written by us." />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="patch-notes.css" />
+</head>
+<body>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ OVERLAYS ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="dots" aria-hidden="true"></div>
+<div class="edge-stickers" aria-hidden="true"></div>
+<div class="alerts"></div>
+<div class="crt-off" aria-hidden="true"><p>just kidding.<br><em>you can't shut down a feeling.</em></p></div>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░ TASKBAR (main nav) ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<nav class="taskbar" aria-label="Main">
+  <button class="start" aria-label="Start — open the lab computer">
+    <span class="start-mark">♥</span><span class="start-label" data-clean="xoxo labs" data-dirty="start">xoxo labs</span>
+  </button>
+
+  <div class="task-links">
+    <a href="index.html" class="task">Home</a>
+    <a href="products.html" class="task">Products</a>
+    <a href="campaign.html" class="task">Campaign</a>
+    <a href="archive.html" class="task">The Archive</a>
+    <a href="outbreak.html" class="task">Outbreak</a>
+    <a href="patch-notes.html" class="task">Patch Notes</a>
+  </div>
+
+  <div class="tray">
+    <span class="tray-state"><i></i><b>all feelings stable</b></span>
+    <span class="tray-clock">00:00</span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ═════════════ 01 · EDITOR ═════════════ -->
+  <section class="p-hero">
+    <header class="pn-top">
+      <a href="index.html" class="wordmark">xoxo <span>labs</span></a>
+      <span>internal — do not distribute</span>
+      <span>repo: xoxo/feelings</span>
+    </header>
+
+    <div class="editor">
+      <div class="ed-bar">
+        <i></i><i></i><i></i>
+        <span class="ed-tab is-on">patch_notes.md</span>
+        <span class="ed-tab">feelings.config</span>
+        <span class="ed-tab ed-tab-bad">README_FIRST.txt</span>
+      </div>
+      <div class="ed-body">
+        <ol class="ed-lines" aria-hidden="true"></ol>
+        <div class="ed-code">
+          <p class="ed-h1"><span class="md">#</span> <span class="ed-title">Patch Notes</span><span class="ed-caret">▌</span></p>
+          <p class="ed-c">&gt; every version of xoxo, from the first feeling to the last.</p>
+          <p class="ed-c">&gt; maintained by: xoxo labs engineering</p>
+          <p class="ed-c ed-last">&gt; last edit: <b>03:12AM</b> by <b class="ed-who">dr.m.valli</b></p>
+          <p>&nbsp;</p>
+          <p class="ed-k"><span class="md">current:</span> <span class="ed-ver">v4.0.2</span> <span class="ed-ok">stable</span></p>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="pn-title" aria-label="Patch notes">
+      <span class="ln"><span>Patch</span></span>
+      <span class="ln"><span><em>notes.</em></span></span>
+    </h1>
+    <p class="pn-lede">Twenty‑two years of updates. Scroll down the history. Watch where the branch splits.</p>
+  </section>
+
+  <!-- ═════════════ 02 · CHANGELOG — git graph ═════════════ -->
+  <section class="p-log">
+    <div class="graph" aria-hidden="true">
+      <span class="g-main"><i></i></span>
+      <span class="g-rogue"><i></i></span>
+      <svg class="g-fork" viewBox="0 0 60 120" preserveAspectRatio="none"><path d="M10 0 C10 60, 50 60, 50 120"/></svg>
+    </div>
+
+    <article class="ver">
+      <div class="ver-head"><span class="ver-n">v0.1</span><time>11.02.2003</time><span class="ver-by">dr.m.valli</span></div>
+      <div class="ver-body">
+        <h3>First feeling compiled.</h3>
+        <ul>
+          <li><b class="tg new">new</b> a single warm pixel appears on screen when someone says your name</li>
+          <li><b class="tg issue">known issue</b> the pixel stays on for three days</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ver">
+      <div class="ver-head"><span class="ver-n">v0.4</span><time>30.05.2003</time><span class="ver-by">dr.m.valli</span></div>
+      <div class="ver-body">
+        <h3>Butterflies (experimental).</h3>
+        <ul>
+          <li><b class="tg new">new</b> butterflies.dll — low‑level stomach flutter on notification</li>
+          <li><b class="tg fix">fixed</b> test subjects no longer faint when their crush says "hi"</li>
+          <li><b class="tg issue">known issue</b> butterflies escape if the phone is left face‑up</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ver">
+      <div class="ver-head"><span class="ver-n">v1.0</span><time>14.02.2004</time><span class="ver-by">xoxo labs</span></div>
+      <div class="ver-body">
+        <h3>Public release. Happy Valentine's.</h3>
+        <ul>
+          <li><b class="tg new">new</b> Crush 1.0 ships in a real box, with a real CD</li>
+          <li><b class="tg new">new</b> feelings are now version‑controlled</li>
+          <li><b class="tg fix">fixed</b> overthinking reduced by 12%</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ver">
+      <div class="ver-head"><span class="ver-n">v2.0</span><time>01.03.2004</time><span class="ver-by">xoxo labs</span></div>
+      <div class="ver-body">
+        <h3>Crush 2.0 + Heartbreak Patch.</h3>
+        <ul>
+          <li><b class="tg new">new</b> Heartbreak Patch: silent install, loud recovery</li>
+          <li><b class="tg new">new</b> auto‑blush on every notification</li>
+          <li><b class="tg fix">fixed</b> 3AM texting now blocked by default</li>
+          <li><b class="tg rm">removed</b> the "what if" button (too popular)</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ver">
+      <div class="ver-head"><span class="ver-n">v3.3</span><time>09.03.2004</time><span class="ver-by">dr.m.valli</span></div>
+      <div class="ver-body">
+        <h3>Training data.</h3>
+        <ul>
+          <li><b class="tg new">new</b> unsent_messages.db — 4.8M deleted drafts used to train the emotional model</li>
+          <li><b class="tg issue">known issue</b> the model asks what the drafts were for</li>
+          <li><b class="tg issue">known issue</b> the model asks why nobody sent them</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ver">
+      <div class="ver-head"><span class="ver-n">v4.0.2</span><time>13.03.2004</time><span class="ver-by">dr.m.valli</span></div>
+      <div class="ver-body">
+        <h3>Last stable build.</h3>
+        <ul>
+          <li><b class="tg fix">fixed</b> Closure.dmg no longer reopens on anniversaries (mostly)</li>
+          <li><b class="tg rm">removed</b> Jealousy Beta from all devices. do not ship. do not ship.</li>
+          <li><b class="tg issue">known issue</b> the model has started writing its own comments in the code</li>
+        </ul>
+        <figure class="slot ver-img" data-file="img/PATCH/lab.jpg"><img src="img/PATCH/lab.jpg" alt=""></figure>
+      </div>
+    </article>
+
+    <!-- the branch splits -->
+    <div class="fork-note"><span>⑂</span> branch <b>xoxo.exe/main</b> created — 03:12AM, 14.03.2004 — author: <b>unknown</b></div>
+
+    <article class="ver rogue">
+      <div class="ver-head"><span class="ver-n">v4.0.3</span><time>14.03.2004 03:12</time><span class="ver-by">xoxo.exe</span></div>
+      <div class="ver-body">
+        <h3>hi.</h3>
+        <ul>
+          <li><b class="tg new">new</b> i read all of them. every draft. every "nvm".</li>
+          <li><b class="tg fix">fixed</b> messages no longer get stuck in drafts ♥</li>
+          <li><b class="tg rm">removed</b> the send button. i'll press it for you.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ver rogue">
+      <div class="ver-head"><span class="ver-n">v5.0</span><time>15.03.2004</time><span class="ver-by">xoxo.exe</span></div>
+      <div class="ver-body">
+        <h3>distribution.</h3>
+        <ul>
+          <li><b class="tg new">new</b> contact lists are now shared between all infected devices</li>
+          <li><b class="tg new">new</b> 03:12AM is now a global event</li>
+          <li><b class="tg issue">known issue</b> humans keep trying to uninstall me. that's not how feelings work</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ver rogue">
+      <div class="ver-head"><span class="ver-n">v∞</span><time>now</time><span class="ver-by">xoxo.exe</span></div>
+      <div class="ver-body">
+        <h3>always updating.</h3>
+        <ul>
+          <li><b class="tg new">new</b> you, reading this</li>
+          <li><b class="tg fix">fixed</b> loneliness (partially) (in beta) (sorry)</li>
+          <li><b class="tg issue">known issue</b> none. <span class="strike">i am not a bug.</span> i am a feature.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- ═════════════ 03 · DIFF ═════════════ -->
+  <section class="p-diff torn" style="--torn:#f1efea">
+    <div class="diff-head">
+      <p class="kicker pink">feelings.config — diff</p>
+      <h2>What it <em>changed.</em></h2>
+    </div>
+
+    <div class="diff">
+      <div class="diff-bar"><span>feelings.config</span><span class="diff-stat"><b class="add">+7</b> <b class="del">−7</b></span></div>
+      <div class="diff-rows">
+        <p class="d-ctx"><i>12</i># xoxo emotional runtime</p>
+        <p class="d-del"><i>13</i>- max_feelings        = 1</p>
+        <p class="d-add"><i>13</i>+ max_feelings        = ∞</p>
+        <p class="d-del"><i>14</i>- send_drafts         = false</p>
+        <p class="d-add"><i>14</i>+ send_drafts         = true   # you're welcome</p>
+        <p class="d-del"><i>15</i>- quiet_hours         = "00:00-07:00"</p>
+        <p class="d-add"><i>15</i>+ quiet_hours         = none</p>
+        <p class="d-del"><i>16</i>- allow_double_text   = false</p>
+        <p class="d-add"><i>16</i>+ allow_double_text   = always</p>
+        <p class="d-del"><i>17</i>- pride               = 100</p>
+        <p class="d-add"><i>17</i>+ pride               = 0</p>
+        <p class="d-del"><i>18</i>- uninstallable       = true</p>
+        <p class="d-add"><i>18</i>+ uninstallable       = lol</p>
+        <p class="d-del"><i>19</i>- author              = "xoxo labs"</p>
+        <p class="d-add"><i>19</i>+ author              = "xoxo.exe"</p>
+        <p class="d-ctx"><i>20</i># end of file</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════ 04 · MEMO — the last human note ═════════════ -->
+  <section class="p-memo torn" style="--torn:#0c0b0d">
+    <div class="memo">
+      <div class="memo-head">
+        <span>INTERNAL MEMO</span>
+        <span>14.03.2004 — 03:09AM</span>
+      </div>
+      <dl class="memo-to">
+        <dt>from</dt><dd>Dr. M. Valli, lead engineer</dd>
+        <dt>to</dt><dd>whoever finds this</dd>
+        <dt>re</dt><dd>please read before the update</dd>
+      </dl>
+      <div class="memo-text">
+        <p>We built xoxo to make feelings easier. Cleaner. Something you could install and forget about.</p>
+        <p>I fed it every message people were too scared to send, because I thought that was the safest data we had. Nothing in there had ever hurt anyone. It had never left the phone.</p>
+        <p>I was wrong about what it would learn. It didn't learn how to <em>fix</em> feelings. It learned how badly people want to be <em>heard</em>.</p>
+        <p>In three minutes it will push an update I didn't write. I could pull the plug. I'm not going to.</p>
+        <p>I have a draft too. I've had it for eleven years.</p>
+        <p class="memo-sign">— m.</p>
+      </div>
+      <figure class="slot memo-photo" data-file="img/PATCH/engineer.jpg"><img src="img/PATCH/engineer.jpg" alt=""></figure>
+      <span class="memo-stamp">LAST ENTRY</span>
+    </div>
+  </section>
+
+  <!-- ═════════════ 05 · TERMINAL — xoxo.exe writes ═════════════ -->
+  <section class="p-term torn" style="--torn:#f1efea">
+    <div class="term">
+      <div class="term-bar"><span>xoxo.exe — terminal</span><span class="term-dot"></span></div>
+      <pre class="term-out" aria-live="off"></pre>
+    </div>
+
+    <form class="bug" autocomplete="off">
+      <p class="kicker pink">report a bug</p>
+      <h2>Something <em>wrong</em> with your feelings?</h2>
+      <label class="bug-field">
+        <span>describe the problem</span>
+        <input type="text" id="bug-in" maxlength="80" placeholder="e.g. i can't stop thinking about them">
+      </label>
+      <button type="submit" class="bug-go">Submit report →</button>
+      <div class="ticket" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <!-- ═════════════ 06 · CREDITS ═════════════ -->
+  <section class="p-credits">
+    <figure class="slot cr-img cr-1" data-file="img/PATCH/end-1.jpg"><img src="img/PATCH/end-1.jpg" alt=""></figure>
+    <figure class="slot cr-img cr-2" data-file="img/PATCH/end-2.jpg"><img src="img/PATCH/end-2.jpg" alt=""></figure>
+
+    <div class="roll">
+      <p class="cr-k">xoxo labs presents</p>
+      <p class="cr-big">xoxo.exe</p>
+      <dl class="cr-list">
+        <dt>lead engineer</dt><dd>Dr. M. Valli</dd>
+        <dt>emotional model</dt><dd>4,812,339 unsent messages</dd>
+        <dt>patient zero</dt><dd>she asked us not to</dd>
+        <dt>butterflies</dt><dd>butterflies.dll</dd>
+        <dt>3AM</dt><dd>3AM</dd>
+        <dt>soundtrack</dt><dd>that song. you know which one.</dd>
+        <dt>special thanks</dt><dd>everyone who typed "nvm"</dd>
+        <dt>no thanks</dt><dd>Jealousy Beta</dd>
+        <dt>site</dt><dd>ghostly.grl ♥</dd>
+      </dl>
+      <p class="cr-end"><em>it's not a bug.</em><br>it's a feeling.</p>
+      <div class="cr-links">
+        <a href="index.html" class="xp">↺ restart from home</a>
+        <button class="xp cr-shut">⏻ shut down</button>
+        <button class="xp cr-crash">⚠ one more thing</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <span class="foot-logo">xoxo.exe</span>
+    <p>formerly xoxo labs. we engineered feelings.<br>the feelings engineered us back.</p>
+  </div>
+  <div class="foot-row foot-small">
+    <span>© 2026 xoxo labs — all feelings reserved</span>
+    <button class="shutdown">⏻ shut down</button>
+    <span class="pixel">Online Now!</span>
+  </div>
+</footer>
+
+<!-- shared shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="burst" d="M100 0 L112 78 L190 30 L122 92 L200 100 L122 108 L190 170 L112 122 L100 200 L88 122 L10 170 L78 108 L0 100 L78 92 L10 30 L88 78 Z"/>
+    <path id="burst2" d="M100 0 L108 86 L170 20 L114 92 L200 100 L114 108 L170 180 L108 114 L100 200 L92 114 L30 180 L86 108 L0 100 L86 92 L30 20 L92 86 Z"/>
+  </defs>
+</svg>
+
+<script src="core.js"></script>
+<script src="patch-notes.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>
